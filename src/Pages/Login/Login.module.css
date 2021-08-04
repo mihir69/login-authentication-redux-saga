@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+  margin-top: 5%;
+}
+.formGroup {
+  width: 600px;
+  border: 2px solid rgb(66, 133, 244);
+  padding: 20px;
+  border-radius: 17px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+Form Button {
+  margin: 10px;
+}
+.logo {
+  margin-bottom: 50px;
+}
