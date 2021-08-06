@@ -12,20 +12,19 @@ const Login = () => {
   const [Password, setPassword] = useState('');
 
   const dispatch = useDispatch();
-
+  
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    dispatch(fatchLoginAuthRequest(Email,Password))
-  }
+    dispatch(fatchLoginAuthRequest(Email, Password));
+   
+  };
 
   return (
     <div className={Login_css.container}>
       <Form className={Login_css.formGroup}>
-
         <FormGroup>
           <img className={Login_css.logo} src={logo} alt='logo' />
         </FormGroup>
-        
         <FormGroup>
           <Label for='exampleEmail'>Email</Label>
           <Input
@@ -57,10 +56,7 @@ const Login = () => {
         >
           Login
         </Button>{' '}
-        <Button
-          type='submit'
-          outline 
-          color='primary'>
+        <Button type='submit' outline color='primary'>
           register
         </Button>
       </Form>

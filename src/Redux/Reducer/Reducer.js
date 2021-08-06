@@ -5,7 +5,8 @@ import {
 } from '../constants/ActionConst';
 
 const LoginAuthState = {
-    Response: [],
+    isUserAuthenticate : false,
+    Response: {},
     Error: '',
     Loading: true,
 };
@@ -16,6 +17,7 @@ const reducer = (state = LoginAuthState, action) => {
             return {
                 ...state,
                 Loading: true,
+                isUserAuthenticate : false,
             };
         }
         case FATCH_LOGIN_AUTH_SUCCESS: {
@@ -23,13 +25,15 @@ const reducer = (state = LoginAuthState, action) => {
                 ...state,
                 Response: action.payload,
                 Error: '',
+                isUserAuthenticate : true,
             };
         }
         case FATCH_LOGIN_AUTH_FAILURE: {
             return {
                 ...state,
                 Error: action.payload,
-                Response: [],
+                 Response : {},
+                 isUserAuthenticate : false,
             };
         }
         default: {
